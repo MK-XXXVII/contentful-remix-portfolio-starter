@@ -36,7 +36,7 @@ export const richTextRenderOptions = {
 		},
 		[BLOCKS.PARAGRAPH]: (node, children) => {
 			return (
-				<p className="text-gray-700 text-base dark:text-gray-400 leading-relaxed mb-4 text-justify">{children}</p>
+				<p className="text-slate-900 text-base dark:text-gray-400 leading-relaxed mb-4 text-justify">{children}</p>
 			);
 		},
 		[BLOCKS.HEADING_1]: (node, children) => {
@@ -60,12 +60,12 @@ export default function PostSlug() {
 	}
     
     return (
-        <div className="sm:max-w-3xl mx-auto">
-				<div className="px-4 sm:px-0">
-					<Title title={title} />
-				</div>
+        <div className="sm:max-w-3xl mx-auto px-4 sm:px-0">
+				<Title title={title} />
+				{description && <p className="text-lg text-slate-900 dark:text-gray-400 mb-4">{description}</p>}
+                {tag && <p className="text-lg text-primary dark:text-secondary mb-4">Tags: {tag}</p>}
 				<article className="mt-4">
-					<div className="post px-4 sm:px-0">
+					<div className="post">
 						{canonicalUrl ? (
 							<p className="text-lg mb-6 italic">
 								This blog was originally shared on{' '}

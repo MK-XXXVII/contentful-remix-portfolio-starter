@@ -47,67 +47,67 @@ export const richTextRenderOptions = {
 export default function Projects() {
     const {projects} = useLoaderData()
     return (
-        <div className="px-4 sm:px-48">
-				<Title title="Projects" emoji="💻" />
-				<div className="grid gap-4 sm:grid-cols-3">
-					{projects.map((project) => {
-						return (
-							<motion.div
-								key={project.title}
-								className="mt-8 max-w-sm rounded overflow-hidden shadow-lg bg-white h-auto dark:bg-gray-700"
-								whileHover={{
-									scale: 1.02,
-									transition: {
-										duration: 0.2,
-										ease: 'easeInOut',
-									},
-								}}
-							>
-								<div
-									style={{
-										position: 'relative',
-										display: 'block',
-										overflow: 'hidden',
-									}}
-								>
-									<div
-										style={{
-											position: 'absolute',
-											top: 0,
-											right: 0,
-											bottom: 0,
-											left: 0,
-											width: '100%',
-											height: '100%',
-											transform: 'scale(1.5)',
-											filter: 'blur(40px)',
-											// ...project.css,
-										}}
-									/>
-									<img {...project.image} />
-								</div>
-								<div className="px-6 py-4">
-									<h2 className="font-bold text-lg sm:text-xl mb-2 dark:text-secondary">
-										{project.title}{' '}
-										<a href={project.link} target="_blank">
-											<span
-												role="image"
-												aria-label="internet"
-												className="cursor-pointer"
-											>
-												🔗
-											</span>
-										</a>
-									</h2>
-									{documentToReactComponents(
-										project.desc.json,
-										richTextRenderOptions
-									)}
-								</div>
-							</motion.div>
-						);
-					})}
-				</div>
-			</div>
+        <div className="px-4 sm:px-6 lg:px-8">
+            <Title title="Projects 1" emoji="💻" />
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                {projects.map((project) => {
+                    return (
+                        <motion.div
+                            key={project.title}
+                            className="mt-8 max-w-sm rounded overflow-hidden shadow-lg bg-purple-400 h-auto dark:bg-gray-700 border border-gray-200 dark:border-gray-800 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+                            whileHover={{
+                                scale: 1.02,
+                                transition: {
+                                    duration: 0.2,
+                                    ease: 'easeInOut',
+                                },
+                            }}
+                        >
+                            <div
+                                style={{
+                                    position: 'relative',
+                                    display: 'block',
+                                    overflow: 'hidden',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        right: 0,
+                                        bottom: 0,
+                                        left: 0,
+                                        width: '100%',
+                                        height: '100%',
+                                        transform: 'scale(1.5)',
+                                        filter: 'blur(40px)',
+                                        // ...project.css,
+                                    }}
+                                />
+                                <img alt="" {...project.image} className="w-full h-64 object-cover"/>
+                            </div>
+                            <div className="px-6 py-4">
+                                <h2 className="font-bold text-lg sm:text-xl mb-2 dark:text-secondary">
+                                    {project.title}{' '}
+                                    <a href={project.link} target="_blank" rel="noreferrer">
+                                        <span
+                                            role="img"
+                                            aria-label="internet"
+                                            className="cursor-pointer"
+                                        >
+                                            🔗
+                                        </span>
+                                    </a>
+                                </h2>
+                                {documentToReactComponents(
+                                    project.desc.json,
+                                    richTextRenderOptions
+                                )}
+                            </div>
+                        </motion.div>
+                    );
+                })}
+            </div>
+        </div>
     )
 }

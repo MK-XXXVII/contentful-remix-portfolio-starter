@@ -13,7 +13,8 @@ export const meta = ({data}) => {
 	const {seoMetadata} = data;
 	return {
 		title: seoMetadata.title,
-		description: seoMetadata.description
+		description: seoMetadata.description,
+		"og:image": `${seoMetadata.ogImage.url}`
 	}
 }
 
@@ -26,7 +27,7 @@ export const richTextRenderOptions = {
 					<a
 						className="text-primary underline dark:text-secondary"
 						target="_blank"
-                        href={uri}
+                        href={uri} rel="noreferrer"
 					>
 						{children[0]}
 					</a>
@@ -36,10 +37,10 @@ export const richTextRenderOptions = {
 };
 
 export default function About() {
-  const {description } = useLoaderData();
+  const {seoMetadata, description } = useLoaderData();
     return (
         <div className="px-8 sm:px-0 sm:max-w-2xl mx-auto">
-        <Title title="About" emoji="🙋‍♂️" />
+        <Title title={ seoMetadata.title } />
       <div className="mt-4 text-lg dark:text-gray-300">
       {documentToReactComponents(description.json,richTextRenderOptions)}
       </div>
