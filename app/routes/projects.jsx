@@ -2,7 +2,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Title from "../components/Title";
 import { client } from "../models/contentful.server";
-import { motion } from 'framer-motion';
+import { useSpring, animated } from 'react-spring';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 
@@ -45,23 +45,24 @@ export const richTextRenderOptions = {
 };
 
 export default function Projects() {
-    const {projects} = useLoaderData()
+    const {projects} = useLoaderData();
+
+    const popUpAnimation = useSpring({
+		to: { transform: 'scale(1)' },
+		from: { transform: 'scale(0.90)' },
+		config: { tension: 100, friction: 5 }
+	})
+
     return (
-        <div className="px-4 sm:px-6 lg:px-8">
+        <div className="px-8 md:px-24 lg:px-32">
             <Title title="Projects 1" emoji="💻" />
-            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => {
                     return (
-                        <motion.div
+                        <animated.div
+                            style={popUpAnimation}
                             key={project.title}
-                            className="mt-8 max-w-sm rounded overflow-hidden shadow-lg bg-purple-400 h-auto dark:bg-gray-700 border border-gray-200 dark:border-gray-800 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-                            whileHover={{
-                                scale: 1.02,
-                                transition: {
-                                    duration: 0.2,
-                                    ease: 'easeInOut',
-                                },
-                            }}
+                            className="mt-8 rounded overflow-hidden shadow-lg bg-white cursor-pointer dark:bg-gray-700"
                         >
                             <div
                                 style={{
@@ -104,7 +105,7 @@ export default function Projects() {
                                     richTextRenderOptions
                                 )}
                             </div>
-                        </motion.div>
+                        </animated.div>
                     );
                 })}
             </div>

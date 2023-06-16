@@ -39,9 +39,9 @@ export const richTextRenderOptions = {
 export default function About() {
   const {seoMetadata, description } = useLoaderData();
     return (
-        <div className="px-8 sm:px-0 sm:max-w-2xl mx-auto">
+        <div className="px-8 sm:px-0 sm:max-w-2xl mx-auto mb-8">
         <Title title={ seoMetadata.title } />
-      <div className="mt-4 text-lg dark:text-gray-300">
+      <div className="mt-4 text-lg dark:text-gray-300 mb-28 mt">
       {documentToReactComponents(description.json,richTextRenderOptions)}
       </div>
       </div>

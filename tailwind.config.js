@@ -5,11 +5,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'rgb(196 181 253);',
-        secondary: 'rgb(15 23 42);',
-        happy: 'rgb(249 115 22);'
+        primary: 'rgb(128, 225, 247);',
+        secondary: 'rgb(0, 51, 102);',
+        happy: 'rgb(255, 165, 0);',
+        cyan: 'rgb(0, 255, 255);',
+        midnightBlue: 'rgb(247, 231, 206);',
+        aegeanBlue: 'rgb(19, 111, 99);',
+        deepPurple: 'rgb(128, 0, 128);',
+        serenity: 'rgb(146, 168, 209);',
+        earthyBrown: 'rgb(160, 82, 45);',
+        twilightPurple: 'rgb(75, 0, 130);',
+        skyBlue: 'rgb(135, 206, 235);',
+        sunsetOrange: 'rgb(255, 111, 97);',
+        lighhtLime: 'rgb(236 252 203);',
+        lightGreen: 'rgb(220 252 231);',
+        lightTeal: 'rgb(204 251 241);',
+        lightIndigo: 'rgb(224 231 255);',
+      },
+      fontFamily: {
+        'sigmar': ['Sigmar One', 'cursive'],
       }
     },
-  },
-  plugins: [],
+    plugins: [],
+  }
 }

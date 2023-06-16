@@ -18,7 +18,8 @@ export const meta = () => ({
 });
 
 export const links = () => [
-  {rel: "stylesheet", href: styles}
+  { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" },
 ]
 
 export default function App() {
@@ -33,19 +34,36 @@ export default function App() {
         <main className="container mx-auto pt-8 sm:pt-16">
           <Outlet />
         </main>
-        
-<footer className="fixed bottom-0 w-screen p-4 bg-purple-300 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-    <span className="text-sm text-indigo-950 sm:text-center dark:text-gray-400">Created with <a href="https://remix.run/" className="hover:underline">Remix</a> and <a href="https://contentful.com/" className="hover:underline">Contentful</a>
-    </span>
-    <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="https://www.contentful.com/remix-tutorial/" className="mr-4 hover:underline md:mr-6 ">Read More</a>
-        </li>
-        <li>
-            <a href="https://github.com/contentful/starter-remix-portfolio" className="mr-4 hover:underline md:mr-6">GitHub</a>
-        </li>
-    </ul>
-</footer>
+
+        <footer className="fixed bottom-0 w-screen p-4 bg-primary border-t-4 border-secondary shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-secondary">
+          <span
+            className="text-sm text-secondary sm:text-center dark:text-gray-400">
+            Created with
+            <a
+              href="https://remix.run/"
+              className="hover:underline">
+              Remix 
+            </a>
+            and
+            <a
+              href="https://contentful.com/"
+              className="hover:underline">
+              Contentful 
+            </a>
+          </span>
+          <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+              <a
+                href="https://www.contentful.com/remix-tutorial/"
+                className="mr-4 hover:underline md:mr-6 ">
+                Read More 
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/contentful/starter-remix-portfolio" className="mr-4 hover:underline md:mr-6">GitHub</a>
+            </li>
+          </ul>
+        </footer>
 
         <ScrollRestoration />
         <Scripts />

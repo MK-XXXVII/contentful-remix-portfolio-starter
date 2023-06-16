@@ -397,3 +397,4 @@ netlify deploy --build --prod
 
 After the successful build, you will be able to view your site!
 # contentful-remix-portfolio-starter
+# greeknous-contentful-remix-portfolio-starter
