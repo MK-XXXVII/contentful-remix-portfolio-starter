@@ -60,27 +60,28 @@ var import_react2 = require("@remix-run/react"), import_react3 = require("react"
 function NavBar() {
   let [isOpen, setIsOpen] = (0, import_react3.useState)(!1);
   return /* @__PURE__ */ React.createElement("header", {
-    className: "sm:flex sm:justify-between sm:items-center sm:px-8 sm:py-4 border-b-2 border-slate-900"
+    className: `bg-primary sm:flex sm:justify-between items-center 
+		sm:px-8 sm:py-4 border-b-2 border-secondary`
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "flex items-center justify-between px-4 py-2 sm:p-0"
+    className: "flex items-center justify-between px-4 pt-4 sm:p-0"
   }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/",
     className: "flex flex-nowrap"
   }, /* @__PURE__ */ React.createElement(import_solid.CodeBracketIcon, {
-    className: "h-10 w-10 text-secondary bg-primary p-1 rounded-full border border-secondary mr-2"
+    className: "h-10 w-10 text-secondary bg-primary p-1 rounded-full border-2 border-secondary mr-2"
   }), /* @__PURE__ */ React.createElement("span", {
-    "aria-label": "GreenNous Dev",
-    className: "text-2xl md:text-3xl font-bold text-slate-900"
-  }, "GreekNous Dev"))), /* @__PURE__ */ React.createElement("div", {
+    "aria-label": "Greek Nous",
+    className: "text-2xl md:text-3xl font-bold text-secondary font-sigmar"
+  }, "Greeknous"))), /* @__PURE__ */ React.createElement("div", {
     className: "flex justify-between items-center"
   }, /* @__PURE__ */ React.createElement("button", {
     type: "button",
-    className: "text-secondary focus:text-secondary/80 hover:text-purple-300 sm:hidden dark:text-white dark:focus:text-primary",
+    className: "text-secondary focus:text-secondary/80 hover:text-primary sm:hidden dark:text-white dark:focus:text-primary",
     onClick: (e) => {
       e.preventDefault(), setIsOpen((previous) => !previous);
     }
   }, /* @__PURE__ */ React.createElement("svg", {
-    className: "fill-current h-8 w-",
+    className: "fill-current h-8 w-8",
     viewBox: "0 0 20 20",
     xmlns: "http://www.w3.org/2000/svg"
   }, isOpen ? /* @__PURE__ */ React.createElement("path", {
@@ -95,31 +96,39 @@ function NavBar() {
     to: "/writings",
     className: `
 						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-primary hover:py-2 hover:px-4 hover:rounded-lg
+						hover:underline hover:bg-secondary hover:text-primary 
+						hover:py-2 hover:px-4 rounded-lg
+						transition duration-300 ease-in-out
 						`
   }, "Writings"), /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/talks",
     className: `
 						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-primary hover:py-2 hover:px-4 hover:rounded-lg
+						hover:underline hover:bg-secondary hover:text-primary 
+						hover:py-2 hover:px-4 rounded-lg
+						transition duration-300 ease-in-out
 						`
   }, "Talks"), /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/projects",
     className: `
 						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-primary hover:py-2 hover:px-4 hover:rounded-lg
+						hover:underline hover:bg-secondary hover:text-primary 
+						hover:py-2 hover:px-4 rounded-lg
+						transition duration-300 ease-in-out
 						`
   }, "Projects"), /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/about",
     className: `
 						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-primary hover:py-2 hover:px-4 hover:rounded-lg
+						hover:underline hover:bg-secondary hover:text-primary 
+						hover:py-2 hover:px-4 rounded-lg
+						transition duration-300 ease-in-out
 						`
   }, "About"))));
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-QED76IK7.css";
+var tailwind_default = "/build/_assets/tailwind-4CP4AAEL.css";
 
 // route:D:\Remix\contentful-remix-portfolio-starter\app\root.jsx
 var meta = () => ({
@@ -128,7 +137,8 @@ var meta = () => ({
   description: "Meet Corgi, the smart cuddly creature that everyone loves!",
   viewport: "width=device-width,initial-scale=1"
 }), links = () => [
-  { rel: "stylesheet", href: tailwind_default }
+  { rel: "stylesheet", href: tailwind_default },
+  { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" }
 ];
 function App() {
   return /* @__PURE__ */ React.createElement("html", {
@@ -136,13 +146,13 @@ function App() {
   }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement(import_react4.Meta, null), /* @__PURE__ */ React.createElement(import_react4.Links, null)), /* @__PURE__ */ React.createElement("body", null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("main", {
     className: "container mx-auto pt-8 sm:pt-16"
   }, /* @__PURE__ */ React.createElement(import_react4.Outlet, null)), /* @__PURE__ */ React.createElement("footer", {
-    className: "fixed bottom-0 w-screen p-4 bg-purple-300 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+    className: "fixed bottom-0 w-screen p-4 bg-primary border-t-4 border-secondary shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-secondary"
   }, /* @__PURE__ */ React.createElement("span", {
-    className: "text-sm text-indigo-950 sm:text-center dark:text-gray-400"
-  }, "Created with ", /* @__PURE__ */ React.createElement("a", {
+    className: "text-sm text-secondary sm:text-center dark:text-gray-400"
+  }, "Created with", /* @__PURE__ */ React.createElement("a", {
     href: "https://remix.run/",
     className: "hover:underline"
-  }, "Remix"), " and ", /* @__PURE__ */ React.createElement("a", {
+  }, "Remix"), "and", /* @__PURE__ */ React.createElement("a", {
     href: "https://contentful.com/",
     className: "hover:underline"
   }, "Contentful")), /* @__PURE__ */ React.createElement("ul", {
@@ -250,26 +260,27 @@ async function getAllBlogs() {
 }
 async function getSingleBlog(slug) {
   return await (await (await apiCall(`
-    query($slug: String){
-        blogCollection(where: {slug:$slug}) {
-            items {
+  query($slug: String){
+      blogCollection(where: {slug:$slug}) {
+          items {
+              title
+              description
+              tag
+              canonicalUrl
+              blogBody {
+                json
+              }
+              sys {
+                publishedAt
+              }
+              openGraphImage {
+                url
                 title
-                description
-                tag
-                canonicalUrl
-                blogBody {
-                  json
-                }
-                sys {
-                  publishedAt
-                }
-                openGraphImage {
-                  url
-                }
               }
             }
-    }
-    `, {
+          }
+  }
+  `, {
     slug
   })).json()).data.blogCollection.items[0];
 }
@@ -300,6 +311,11 @@ async function getPage(title) {
               }
               description
             }
+            imageForPage {
+              url
+              title
+              description
+            }
           }
         }
       }
@@ -312,9 +328,9 @@ var client = { getProjects, getTalks, getAllBlogs, getSingleBlog, getPage };
 // app/components/Title.jsx
 function Title({ title, emoji }) {
   return /* @__PURE__ */ React.createElement("h1", {
-    className: "text-3xl leading-normal sm:text-5xl sm:leading-normal font-body dark:text-white"
+    className: "text-3xl leading-normal sm:text-5xl font-semibold sm:leading-normal font-body text-secondary dark:text-primary pb-12"
   }, /* @__PURE__ */ React.createElement("span", {
-    className: "rounded border-b-4 border-primary dark:border-secondary"
+    className: "rounded border-b-4 border-secondary dark:border-primary"
   }, title), "\xA0", /* @__PURE__ */ React.createElement("span", {
     role: "img",
     "aria-label": title
@@ -330,7 +346,7 @@ var import_rich_text_react_renderer = require("@contentful/rich-text-react-rende
   return {
     title,
     description,
-    "og:image": `${openGraphImage.url}`
+    "og:image": `${openGraphImage.url || ""} ${openGraphImage.title || ""}`
   };
 }, richTextRenderOptions = {
   renderNode: {
@@ -343,33 +359,46 @@ var import_rich_text_react_renderer = require("@contentful/rich-text-react-rende
         rel: "noreferrer"
       }, children[0]);
     },
-    [import_rich_text_types.BLOCKS.PARAGRAPH]: (node, children) => /* @__PURE__ */ React.createElement("p", {
-      className: "text-slate-900 text-base dark:text-gray-400 leading-relaxed mb-4 text-justify"
+    [import_rich_text_types.BLOCKS.PARAGRAPH]: (_node, children) => /* @__PURE__ */ React.createElement("p", {
+      className: "text-secondary text-base dark:text-gray-400 leading-relaxed mb-4 text-justify"
     }, children),
-    [import_rich_text_types.BLOCKS.HEADING_1]: (node, children) => /* @__PURE__ */ React.createElement("h2", {
+    [import_rich_text_types.BLOCKS.HEADING_1]: (_node, children) => /* @__PURE__ */ React.createElement("h2", {
       className: "text-4xl"
     }, children),
-    [import_rich_text_types.BLOCKS.HEADING_2]: (node, children) => /* @__PURE__ */ React.createElement("h2", {
-      className: "text-3xl"
+    [import_rich_text_types.BLOCKS.HEADING_2]: (_node, children) => /* @__PURE__ */ React.createElement("h2", {
+      className: "text-2xl font-semibold text-secondary my-6"
+    }, children),
+    [import_rich_text_types.BLOCKS.OL_LIST]: (_node, children) => /* @__PURE__ */ React.createElement("ol", {
+      className: "list-decimal"
+    }, children),
+    [import_rich_text_types.BLOCKS.LIST_ITEM]: (_node, children) => /* @__PURE__ */ React.createElement("li", {
+      className: "text-secondary text-lg dark:text-gray-400 mb-4"
     }, children)
   }
 };
 function PostSlug() {
-  let { title, description, tag, blogBody, sys, canonicalUrl } = (0, import_react5.useLoaderData)(), canonicalName = "";
+  let { title, description, tag, blogBody, sys, canonicalUrl, openGraphImage } = (0, import_react5.useLoaderData)(), canonicalName = "";
   return canonicalUrl && (canonicalName = canonicalUrl.replace("https://", "").split("/")[0]), /* @__PURE__ */ React.createElement("div", {
-    className: "sm:max-w-3xl mx-auto px-4 sm:px-0"
+    className: "sm:max-w-3xl mx-auto px-4 sm:px-0 pb-28"
   }, /* @__PURE__ */ React.createElement(Title, {
     title
+  }), openGraphImage && /* @__PURE__ */ React.createElement("img", {
+    src: openGraphImage.url,
+    alt: openGraphImage.title,
+    className: "w-full h-auto object-cover rounded-lg pb-10"
   }), description && /* @__PURE__ */ React.createElement("p", {
-    className: "text-lg text-slate-900 dark:text-gray-400 mb-4"
+    className: "text-xl text-secondary dark:text-gray-400 mb-8"
   }, description), tag && /* @__PURE__ */ React.createElement("p", {
-    className: "text-lg text-primary dark:text-secondary mb-4"
-  }, "Tags: ", tag), /* @__PURE__ */ React.createElement("article", {
+    className: "text-lg font-bold text-secondary dark:text-cyan mx-2 mb-4 my-4"
+  }, "Tags:", " ", tag.map((t, index) => /* @__PURE__ */ React.createElement("span", {
+    key: index,
+    className: "bg-happy px-2 py-1 mx-2 rounded-full border-2 border-secondary"
+  }, t, index < tag.length - 1 && ", "))), "				", /* @__PURE__ */ React.createElement("article", {
     className: "mt-4"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "post"
   }, canonicalUrl ? /* @__PURE__ */ React.createElement("p", {
-    className: "text-lg mb-6 italic"
+    className: "text-lg my-8 italic"
   }, "This blog was originally shared on", " ", /* @__PURE__ */ React.createElement("a", {
     href: canonicalUrl
   }, canonicalName), ".") : null, (0, import_rich_text_react_renderer.documentToReactComponents)(blogBody.json, richTextRenderOptions))), /* @__PURE__ */ React.createElement("p", {
@@ -394,7 +423,7 @@ var meta3 = ({ data }) => {
   return {
     title: seoMetadata.title,
     description: seoMetadata.description,
-    "og:image": `${seoMetadata.ogImage.url}`
+    "og:image": `${seoMetadata.ogImage.url || ""} ${seoMetadata.ogImage.title || ""}`
   };
 };
 function PostList(data) {
@@ -429,12 +458,15 @@ function PostList(data) {
   }, "\u2192")))));
 }
 function Writings() {
-  let { blogs } = (0, import_react6.useLoaderData)();
+  let { blogs, page } = (0, import_react6.useLoaderData)();
   return /* @__PURE__ */ React.createElement("div", {
     className: "px-8 sm:px-0 sm:max-w-2xl mx-auto"
   }, /* @__PURE__ */ React.createElement(Title, {
     title: "Writings",
     emoji: "\u{1F4DD}"
+  }), page.seoMetadata && page.seoMetadata.ogImage && /* @__PURE__ */ React.createElement("img", {
+    src: page.seoMetadata.ogImage.url,
+    alt: page.seoMetadata.title
   }), PostList(blogs));
 }
 
@@ -447,7 +479,7 @@ __export(projects_exports, {
   richTextRenderOptions: () => richTextRenderOptions2
 });
 var import_node3 = require("@remix-run/node"), import_react7 = require("@remix-run/react");
-var import_framer_motion = require("framer-motion"), import_rich_text_react_renderer2 = require("@contentful/rich-text-react-renderer"), import_rich_text_types2 = require("@contentful/rich-text-types");
+var import_react_spring = require("react-spring"), import_rich_text_react_renderer2 = require("@contentful/rich-text-react-renderer"), import_rich_text_types2 = require("@contentful/rich-text-types");
 async function loader3() {
   let projects = await client.getProjects(), page = await client.getPage("Projects");
   return (0, import_node3.json)({ projects, page });
@@ -476,24 +508,22 @@ var meta4 = ({ data }) => {
   }
 };
 function Projects() {
-  let { projects } = (0, import_react7.useLoaderData)();
+  let { projects } = (0, import_react7.useLoaderData)(), popUpAnimation = (0, import_react_spring.useSpring)({
+    to: { transform: "scale(1)" },
+    from: { transform: "scale(0.90)" },
+    config: { tension: 100, friction: 5 }
+  });
   return /* @__PURE__ */ React.createElement("div", {
-    className: "px-4 sm:px-6 lg:px-8"
+    className: "px-8 md:px-24 lg:px-32"
   }, /* @__PURE__ */ React.createElement(Title, {
     title: "Projects 1",
     emoji: "\u{1F4BB}"
   }), /* @__PURE__ */ React.createElement("div", {
-    className: "grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-  }, projects.map((project) => /* @__PURE__ */ React.createElement(import_framer_motion.motion.div, {
+    className: "grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+  }, projects.map((project) => /* @__PURE__ */ React.createElement(import_react_spring.animated.div, {
+    style: popUpAnimation,
     key: project.title,
-    className: "mt-8 max-w-sm rounded overflow-hidden shadow-lg bg-purple-400 h-auto dark:bg-gray-700 border border-gray-200 dark:border-gray-800 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-2xl",
-    whileHover: {
-      scale: 1.02,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut"
-      }
-    }
+    className: "mt-8 rounded overflow-hidden shadow-lg bg-white cursor-pointer dark:bg-gray-700"
   }, /* @__PURE__ */ React.createElement("div", {
     style: {
       position: "relative",
@@ -567,11 +597,11 @@ var meta5 = ({ data }) => {
 function About() {
   let { seoMetadata, description } = (0, import_react8.useLoaderData)();
   return /* @__PURE__ */ React.createElement("div", {
-    className: "px-8 sm:px-0 sm:max-w-2xl mx-auto"
+    className: "px-8 sm:px-0 sm:max-w-2xl mx-auto mb-8"
   }, /* @__PURE__ */ React.createElement(Title, {
     title: seoMetadata.title
   }), /* @__PURE__ */ React.createElement("div", {
-    className: "mt-4 text-lg dark:text-gray-300"
+    className: "mt-4 text-lg dark:text-gray-300 mb-28 mt"
   }, (0, import_rich_text_react_renderer3.documentToReactComponents)(description.json, richTextRenderOptions3)));
 }
 
@@ -582,10 +612,127 @@ __export(routes_exports, {
   loader: () => loader5,
   meta: () => meta6
 });
-var import_react_text_loop_next = require("react-text-loop-next"), import_framer_motion2 = require("framer-motion"), import_node5 = require("@remix-run/node"), import_react9 = require("@remix-run/react");
-var import_fa = require("react-icons/fa");
+var import_node7 = require("@remix-run/node");
+
+// app/components/Hero.jsx
+var import_react_text_loop_next = require("react-text-loop-next"), import_node6 = require("@remix-run/node"), import_react10 = require("@remix-run/react"), import_rich_text_types4 = require("@contentful/rich-text-types"), import_rich_text_react_renderer4 = require("@contentful/rich-text-react-renderer"), import_react_spring2 = require("react-spring");
+
+// app/components/SocialMedia.jsx
+var import_react9 = require("@remix-run/react"), import_fa = require("react-icons/fa"), import_node5 = require("@remix-run/node");
+function SocialMedia() {
+  let { linksCollection } = (0, import_react9.useLoaderData)(), links2 = {};
+  return linksCollection.items.forEach((link) => {
+    Object.assign(links2, Object.fromEntries([Object.values(link)]));
+  }), /* @__PURE__ */ React.createElement("div", {
+    className: "flex flex-nowrap gap-2 mt-4 sm:mt-16 dark:text-secondary items-start"
+  }, /* @__PURE__ */ React.createElement("a", {
+    href: links2.LinkedIn,
+    target: "_blank",
+    "aria-label": "LinkedIn",
+    rel: "noreferrer"
+  }, /* @__PURE__ */ React.createElement(import_fa.FaLinkedin, {
+    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
+  })), /* @__PURE__ */ React.createElement("a", {
+    href: links2.GitHub,
+    target: "_blank",
+    "aria-label": "GitHub",
+    rel: "noreferrer"
+  }, /* @__PURE__ */ React.createElement(import_fa.FaGithub, {
+    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
+  })), /* @__PURE__ */ React.createElement("a", {
+    href: links2.Facebook,
+    target: "_blank",
+    "aria-label": "Facebook",
+    rel: "noreferrer"
+  }, /* @__PURE__ */ React.createElement(import_fa.FaFacebook, {
+    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
+  })), /* @__PURE__ */ React.createElement("a", {
+    href: links2.Instagram,
+    target: "_blank",
+    "aria-label": "Instagram",
+    rel: "noreferrer"
+  }, /* @__PURE__ */ React.createElement(import_fa.FaInstagram, {
+    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
+  })), /* @__PURE__ */ React.createElement("a", {
+    href: links2.Twitter,
+    target: "_blank",
+    "aria-label": "Twitter",
+    rel: "noreferrer"
+  }, /* @__PURE__ */ React.createElement(import_fa.FaTwitter, {
+    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
+  })), /* @__PURE__ */ React.createElement("a", {
+    href: links2.YouTube,
+    target: "_blank",
+    "aria-label": "YouTube",
+    rel: "noreferrer"
+  }, /* @__PURE__ */ React.createElement(import_fa.FaYoutube, {
+    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
+  })));
+}
+
+// app/components/Hero.jsx
+function Hero() {
+  let { title, rolesCollection, description, imageForPage } = (0, import_react10.useLoaderData)(), options = {
+    renderMark: {
+      [import_rich_text_types4.MARKS.BOLD]: (text) => /* @__PURE__ */ React.createElement("b", null, text)
+    },
+    renderNode: {
+      [import_rich_text_types4.BLOCKS.PARAGRAPH]: (_node, children) => /* @__PURE__ */ React.createElement("p", null, children)
+    }
+  }, shakeAnimation = (0, import_react_spring2.useSpring)({
+    to: [
+      { transform: "rotate(5deg)" },
+      { transform: "rotate(-5deg)" }
+    ],
+    from: { transform: "rotate(0deg)" },
+    config: { tension: 80, friction: 10 },
+    reset: !0,
+    loop: !0
+  });
+  return /* @__PURE__ */ React.createElement("div", {
+    className: "relative isolate max-h-full overflow-hidden bg-secondary-to-b from-secondary/20"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "mx-auto max-w-full px-4 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-8"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "lg:pt-20"
+  }, imageForPage && /* @__PURE__ */ React.createElement("img", {
+    src: imageForPage.url,
+    alt: "Hero",
+    className: "w-full object-cover object-center h-auto lg:hidden"
+  }), /* @__PURE__ */ React.createElement("div", {
+    className: "mx-auto"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "max-w-3xl"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "items-center justify-center pt-8 lg:pt-0"
+  }, /* @__PURE__ */ React.createElement("h1", {
+    className: "text-3xl text-center md:text-start sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter"
+  }, "Hello, I'm", " ", /* @__PURE__ */ React.createElement(import_react_spring2.animated.div, {
+    style: shakeAnimation,
+    className: "inline-block text-center bg-primary text-secondary px-2 py-4 dark:bg-secondary dark:text-primary"
+  }, title))), /* @__PURE__ */ React.createElement("div", {
+    className: `flex flex-wrap items-center justify-left text-center sm:justify-center md:justify-start lg:justify-start xl:justify-start 
+                                            text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl 
+                                            pt-6 font-bold tracking-tighter`
+  }, /* @__PURE__ */ React.createElement("h1", null, "and I'm", "  "), /* @__PURE__ */ React.createElement(import_react_text_loop_next.TextLoop, {
+    mask: !0
+  }, rolesCollection.items.map((role) => /* @__PURE__ */ React.createElement("h1", {
+    className: "bg-happy px-2 py-4 mx-2",
+    key: role.roleTitle
+  }, role.roleTitle))), /* @__PURE__ */ React.createElement("span", null, " Developer")), /* @__PURE__ */ React.createElement("p", {
+    className: "my-6 text-base leading-8 text-secondary"
+  }, (0, import_rich_text_react_renderer4.documentToReactComponents)(description.json, options)), /* @__PURE__ */ React.createElement(SocialMedia, null)))), /* @__PURE__ */ React.createElement("div", {
+    className: "px-4 py-2 text-center lg:flex items-center justify-center hidden"
+  }, imageForPage && /* @__PURE__ */ React.createElement("img", {
+    src: imageForPage.url,
+    alt: imageForPage.title,
+    className: "w-full object-cover object-center h-auto"
+  }))));
+}
+
+// route:D:\Remix\contentful-remix-portfolio-starter\app\routes\index.jsx
 async function loader5() {
-  return (0, import_node5.json)(await client.getPage("Michail"));
+  return (0, import_node7.json)(await client.getPage("Michail"));
 }
 var meta6 = ({ data }) => {
   let { seoMetadata } = data;
@@ -596,73 +743,7 @@ var meta6 = ({ data }) => {
   };
 };
 function Index() {
-  let { title, rolesCollection, linksCollection } = (0, import_react9.useLoaderData)(), links2 = {};
-  return linksCollection.items.forEach((link) => {
-    Object.assign(links2, Object.fromEntries([Object.values(link)]));
-  }), /* @__PURE__ */ React.createElement("div", {
-    className: "mt-24 sm:mt-24 w-full dark:text-white"
-  }, /* @__PURE__ */ React.createElement("div", {
-    className: "text-center"
-  }, /* @__PURE__ */ React.createElement("h1", {
-    className: "text-3xl sm:text-6xl"
-  }, "Hello, I'm", " ", /* @__PURE__ */ React.createElement(import_framer_motion2.motion.div, {
-    animate: {
-      rotate: [0, 5, 0, -5, 0]
-    },
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-      loop: "Infinity",
-      repeatDelay: 2
-    },
-    className: "inline-block text-center bg-primary text-secondary px-2 dark:bg-secondary dark:text-primary"
-  }, title))), /* @__PURE__ */ React.createElement("div", {
-    className: "text-center pt-8"
-  }, /* @__PURE__ */ React.createElement(import_react_text_loop_next.TextLoop, {
-    mask: !0
-  }, rolesCollection.items.map((role) => /* @__PURE__ */ React.createElement("h1", {
-    className: "text-2xl sm:text-5xl bg-happy px-2 py-1",
-    key: role.roleTitle
-  }, role.roleTitle))), /* @__PURE__ */ React.createElement("span", {
-    className: "text-2xl sm:text-5xl"
-  }, " Developer")), /* @__PURE__ */ React.createElement("div", {
-    className: "mt-8 sm:mt-16 flex justify-between sm:mx-64 mx-12 dark:text-secondary"
-  }, /* @__PURE__ */ React.createElement("a", {
-    href: links2.LinkedIn,
-    target: "_blank",
-    "aria-label": "LinkedIn",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaLinkedin, {
-    className: "h-12 w-12 sm:h-16 sm:w-16 fill-current"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.GitHub,
-    target: "_blank",
-    "aria-label": "GitHub",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaGithub, {
-    className: "h-12 w-12 sm:h-16 sm:w-16 fill-current"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.Twitter,
-    target: "_blank",
-    "aria-label": "Twitter",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaTwitter, {
-    className: "h-12 w-12 sm:h-16 sm:w-16 fill-current"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.Twitch,
-    target: "_blank",
-    "aria-label": "Twitch",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaTwitch, {
-    className: "h-12 w-12 sm:h-16 sm:w-16 fill-current"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.YouTube,
-    target: "_blank",
-    "aria-label": "YouTube",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaYoutube, {
-    className: "h-12 w-12 sm:h-16 sm:w-16 fill-current"
-  }))));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Hero, null));
 }
 
 // route:D:\Remix\contentful-remix-portfolio-starter\app\routes\talks.jsx
@@ -672,11 +753,11 @@ __export(talks_exports, {
   loader: () => loader6,
   meta: () => meta7
 });
-var import_node6 = require("@remix-run/node"), import_react10 = require("@remix-run/react");
-var import_framer_motion3 = require("framer-motion"), import_rich_text_react_renderer4 = require("@contentful/rich-text-react-renderer");
+var import_node8 = require("@remix-run/node"), import_react11 = require("@remix-run/react");
+var import_rich_text_react_renderer5 = require("@contentful/rich-text-react-renderer"), import_react_spring3 = require("react-spring");
 async function loader6() {
   let talks = await client.getTalks(), page = await client.getPage("Talks");
-  return (0, import_node6.json)({ talks, page });
+  return (0, import_node8.json)({ talks, page });
 }
 var meta7 = ({ data }) => {
   let { title, description, ogImage } = data.page.seoMetadata;
@@ -687,28 +768,27 @@ var meta7 = ({ data }) => {
   };
 };
 function Talks() {
-  let { talks } = (0, import_react10.useLoaderData)();
+  let { talks } = (0, import_react11.useLoaderData)(), popUpAnimation = (0, import_react_spring3.useSpring)({
+    to: { transform: "scale(1)" },
+    from: { transform: "scale(0.90)" },
+    config: { tension: 100, friction: 5 }
+  });
   return /* @__PURE__ */ React.createElement("div", {
-    className: "px-4 sm:px-48"
+    className: "px-8 md:px-24 lg:px-32"
   }, /* @__PURE__ */ React.createElement(Title, {
     title: "Talks",
     emoji: "\u{1F399}"
   }), /* @__PURE__ */ React.createElement("div", {
-    className: "grid gap-6 sm:grid-cols-3"
+    className: "grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
   }, talks.map((item) => {
     let { link, sys, description, title, type, previewImage } = item;
     return /* @__PURE__ */ React.createElement("a", {
       href: link,
-      key: sys.id
-    }, /* @__PURE__ */ React.createElement(import_framer_motion3.motion.div, {
-      className: "mt-8 max-w-sm rounded overflow-hidden shadow-lg bg-white cursor-pointer dark:bg-gray-700",
-      whileHover: {
-        scale: 1.05,
-        transition: {
-          duration: 0.4,
-          ease: "easeInOut"
-        }
-      }
+      key: sys.id,
+      type
+    }, /* @__PURE__ */ React.createElement(import_react_spring3.animated.div, {
+      style: popUpAnimation,
+      className: "mt-8 rounded overflow-hidden shadow-lg bg-white cursor-pointer dark:bg-secondary"
     }, /* @__PURE__ */ React.createElement("div", {
       style: {
         position: "relative",
@@ -734,12 +814,12 @@ function Talks() {
       className: "px-6 py-4"
     }, /* @__PURE__ */ React.createElement("h2", {
       className: "font-semibold text-lg mb-2 dark:text-secondary"
-    }, title), /* @__PURE__ */ React.createElement("p", null, (0, import_rich_text_react_renderer4.documentToReactComponents)(description.json)))));
+    }, title), /* @__PURE__ */ React.createElement("p", null, (0, import_rich_text_react_renderer5.documentToReactComponents)(description.json)))));
   })));
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "bfb7b652", entry: { module: "/build/entry.client-AQQQPSSX.js", imports: ["/build/_shared/chunk-OUQWDEZ6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-NMGLJOGI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-53G2U7CT.js", imports: ["/build/_shared/chunk-TVN7EA6B.js", "/build/_shared/chunk-2ONRQSTW.js", "/build/_shared/chunk-NDBZULVH.js", "/build/_shared/chunk-WKL3YZDF.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-VYHEV6QD.js", imports: ["/build/_shared/chunk-3VCTWIYN.js", "/build/_shared/chunk-WKL3YZDF.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/projects": { id: "routes/projects", parentId: "root", path: "projects", index: void 0, caseSensitive: void 0, module: "/build/routes/projects-WCJ24I74.js", imports: ["/build/_shared/chunk-TVN7EA6B.js", "/build/_shared/chunk-2ONRQSTW.js", "/build/_shared/chunk-NDBZULVH.js", "/build/_shared/chunk-3VCTWIYN.js", "/build/_shared/chunk-WKL3YZDF.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/talks": { id: "routes/talks", parentId: "root", path: "talks", index: void 0, caseSensitive: void 0, module: "/build/routes/talks-JL7TPK7Z.js", imports: ["/build/_shared/chunk-2ONRQSTW.js", "/build/_shared/chunk-NDBZULVH.js", "/build/_shared/chunk-3VCTWIYN.js", "/build/_shared/chunk-WKL3YZDF.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/$slug": { id: "routes/writings/$slug", parentId: "root", path: "writings/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/writings/$slug-VQB6CU3N.js", imports: ["/build/_shared/chunk-VZJXMEGJ.js", "/build/_shared/chunk-TVN7EA6B.js", "/build/_shared/chunk-2ONRQSTW.js", "/build/_shared/chunk-NDBZULVH.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/index": { id: "routes/writings/index", parentId: "root", path: "writings", index: !0, caseSensitive: void 0, module: "/build/routes/writings/index-X7F2VBCN.js", imports: ["/build/_shared/chunk-VZJXMEGJ.js", "/build/_shared/chunk-NDBZULVH.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-BFB7B652.js" };
+var assets_manifest_default = { version: "fd5c278b", entry: { module: "/build/entry.client-OPOE64L5.js", imports: ["/build/_shared/chunk-RXBXOOMD.js", "/build/_shared/chunk-PJTDBEHK.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-7O5QIWA5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-6ETQ3FL3.js", imports: ["/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-D7Y6OSO6.js", imports: ["/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-SIRDQVIK.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/projects": { id: "routes/projects", parentId: "root", path: "projects", index: void 0, caseSensitive: void 0, module: "/build/routes/projects-M7IBBA3J.js", imports: ["/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-SIRDQVIK.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/talks": { id: "routes/talks", parentId: "root", path: "talks", index: void 0, caseSensitive: void 0, module: "/build/routes/talks-PD67A3VB.js", imports: ["/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-SIRDQVIK.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/$slug": { id: "routes/writings/$slug", parentId: "root", path: "writings/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/writings/$slug-QRR5LOM4.js", imports: ["/build/_shared/chunk-NRAIPCGV.js", "/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/index": { id: "routes/writings/index", parentId: "root", path: "writings", index: !0, caseSensitive: void 0, module: "/build/routes/writings/index-6ZZ6BUCQ.js", imports: ["/build/_shared/chunk-NRAIPCGV.js", "/build/_shared/chunk-HN4TSISW.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-FD5C278B.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports }, routes = {
