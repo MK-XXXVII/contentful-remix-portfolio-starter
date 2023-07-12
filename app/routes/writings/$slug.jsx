@@ -26,7 +26,7 @@ export const richTextRenderOptions = {
 			const { uri } = data;
 			return (
 				<a
-					className="text-primary underline dark:text-secondary"
+					className="text-happy underline dark:text-secondary"
 					target="_blank"
 					href={uri} rel="noreferrer"
 				>
@@ -36,17 +36,17 @@ export const richTextRenderOptions = {
 		},
 		[BLOCKS.PARAGRAPH]: (_node, children) => {
 			return (
-				<p className="text-secondary text-base dark:text-gray-400 leading-relaxed mb-4 text-justify">{children}</p>
+				<p className="text-white text-lg dark:text-gray-400 leading-relaxed mb-4 text-justify">{children}</p>
 			);
 		},
 		[BLOCKS.HEADING_1]: (_node, children) => {
 			return (
-				<h2 className="text-4xl">{children}</h2>
+				<h2 className="text-happy text-4xl">{children}</h2>
 			)
 		},
 		[BLOCKS.HEADING_2]: (_node, children) => {
 			return (
-				<h2 className="text-2xl font-semibold text-secondary my-6">{children}</h2>
+				<h2 className="text-2xl font-semibold text-happy my-6">{children}</h2>
 			)
 		},
 		[BLOCKS.OL_LIST]: (_node, children) => {
@@ -56,7 +56,7 @@ export const richTextRenderOptions = {
 		},
 		[BLOCKS.LIST_ITEM]: (_node, children) => {
 			return (
-				<li className="text-secondary text-lg dark:text-gray-400 mb-4">{children}</li>
+				<li className="text-happy text-lg dark:text-gray-400 mb-4">{children}</li>
 			)
 		}
 	}
@@ -79,14 +79,14 @@ export default function PostSlug() {
 					className="w-full h-auto object-cover rounded-lg pb-10"
 				/>
 			}
-			{description && <p className="text-xl text-secondary dark:text-gray-400 mb-8">{description}</p>}
+			{description && <p className="text-xl text-cyan dark:text-gray-400 mb-8">{description}</p>}
 			{tag && (
-				<p className="text-lg font-bold text-secondary dark:text-cyan mx-2 mb-4 my-4">
+				<p className="text-lg font-bold text-white dark:text-cyan mx-2 mb-4 my-4">
 					Tags:{" "}
 					{tag.map((t, index) => (
-						<span key={index} className="bg-happy px-2 py-1 mx-2 rounded-full border-2 border-secondary">
+						<span key={index} className="bg-deepPurple px-2 py-1 mx-2 rounded-full border border-white">
 							{t}
-							{index < tag.length - 1 && ", "}
+							{index < tag.length - 1 && " "}
 						</span>
 					))}
 				</p>

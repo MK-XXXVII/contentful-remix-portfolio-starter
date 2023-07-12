@@ -36,7 +36,7 @@ export default function Hero() {
     });
 
     return (
-        <div className="relative isolate max-h-full overflow-hidden bg-secondary-to-b from-secondary/20">
+        <div className="relative isolate max-h-full overflow-hidden">
             <div className="mx-auto max-w-full px-4 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-8">
                 <div className="lg:pt-20" >
                     {imageForPage && (
@@ -45,30 +45,30 @@ export default function Hero() {
                     <div className="mx-auto">
                         <div className="max-w-3xl">
                             <div className="items-center justify-center pt-8 lg:pt-0">
-                                <h1 className="text-3xl text-center md:text-start sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter">
+                                <h1 className="text-3xl text-start text-happy md:text-start sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter">
                                     Hello, I'm{' '}
                                     <animated.div style={shakeAnimation}
-                                        className="inline-block text-center bg-primary text-secondary px-2 py-4 dark:bg-secondary dark:text-primary">
+                                        className="inline-block text-center bg-happy text-black px-2 py-4 dark:bg-secondary dark:text-primary">
                                         {title}
                                     </animated.div>
                                 </h1>
                             </div>
-                            <div className="flex flex-wrap items-center justify-left text-center sm:justify-center md:justify-start lg:justify-start xl:justify-start 
-                                            text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl 
+                            <div className="flex flex-wrap text-white items-center justify-left text-center sm:justify-left md:justify-start lg:justify-start xl:justify-start 
+                                            text-2xl md:text-2xl lg:text-3xl xl:text-4xl 
                                             pt-6 font-bold tracking-tighter">
                                 <h1>
                                     and I'm{'  '}
                                 </h1>
                                 <TextLoop mask={true}>
                                     {rolesCollection.items.map(role => (
-                                        <h1 className="bg-happy px-2 py-4 mx-2" key={role.roleTitle}>
+                                        <h1 className="bg-deepPurple px-2 py-4 mx-2" key={role.roleTitle}>
                                             {role.roleTitle}
                                         </h1>
                                     ))}
                                 </TextLoop>
                                 <span> Developer</span>
                             </div>
-                            <p className="my-6 text-base leading-8 text-secondary">
+                            <p className="my-6 text-lg leading-8 text-cyan">
                                 {documentToReactComponents(description.json, options)}
                             </p>
                             <SocialMedia />

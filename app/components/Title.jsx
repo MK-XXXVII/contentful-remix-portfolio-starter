@@ -1,7 +1,7 @@
 export default function Title({title, emoji}) {
     return (
-        <h1 className="text-3xl leading-normal sm:text-5xl font-semibold sm:leading-normal font-body text-secondary dark:text-primary pb-12">
-            <span className='rounded border-b-4 border-secondary dark:border-primary'>{title}</span>&nbsp;
+        <h1 className="text-3xl leading-normal sm:text-5xl font-semibold sm:leading-normal font-body text-happy dark:text-primary pb-12">
+            <span className='rounded border-b-4 border-happy dark:border-primary'>{title}</span>&nbsp;
         <span role="img" aria-label={title}>
           {emoji}
         </span>

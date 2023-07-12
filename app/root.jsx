@@ -12,8 +12,8 @@ import styles from "./tailwind.css";
 
 export const meta = () => ({
   charset: "utf-8",
-  title: "Corgi's Playground",
-  description: "Meet Corgi, the smart cuddly creature that everyone loves!",
+  title: "Greek Nous - Home",
+  description: "Frontend Developer specializing in Headless Ecommerce!",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -29,42 +29,21 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-twilightPurple h-screen flex flex-col gap-y-4">
         <NavBar />
-        <main className="container mx-auto pt-8 sm:pt-16">
+        <main className="container mx-auto pt-8 pb-32 lg:py-16 flex-grow">
           <Outlet />
         </main>
-
-        <footer className="fixed bottom-0 w-screen p-4 bg-primary border-t-4 border-secondary shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-secondary">
-          <span
-            className="text-sm text-secondary sm:text-center dark:text-gray-400">
-            Created with
-            <a
-              href="https://remix.run/"
-              className="hover:underline">
-              Remix 
-            </a>
-            and
-            <a
-              href="https://contentful.com/"
-              className="hover:underline">
-              Contentful 
-            </a>
+        <footer className="p-4 bg-twilightPurple border-t-2 border-primary shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-secondary">
+          <span className="text-sm text-happy sm:text-center dark:text-gray-400">Created with
+            <a href="https://remix.run/" className="hover:underline"> Remix</a> and
+            <a href="https://contentful.com/" className="hover:underline"> Contentful</a>
           </span>
-          <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-            <li>
-              <a
-                href="https://www.contentful.com/remix-tutorial/"
-                className="mr-4 hover:underline md:mr-6 ">
-                Read More 
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/contentful/starter-remix-portfolio" className="mr-4 hover:underline md:mr-6">GitHub</a>
-            </li>
+          <ul className="flex flex-wrap items-center mt-3 text-sm text-happy dark:text-happy sm:mt-0">
+            <li><a href="https://www.contentful.com/remix-tutorial/" className="mr-4 hover:underline md:mr-6">Read More</a></li>
+            <li><a href="https://github.com/contentful/starter-remix-portfolio" className="mr-4 hover:underline md:mr-6">GitHub</a></li>
           </ul>
         </footer>
-
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

@@ -3,22 +3,19 @@ import { useState } from "react";
 import { CodeBracketIcon } from '@heroicons/react/24/solid'
 
 export default function NavBar() {
-
 	const [isOpen, setIsOpen] = useState(false);
 	const handleClick = (e) => {
-		e.preventDefault();
-		setIsOpen((previous) => !previous);
+		setIsOpen((prev) => !prev);
 	};
 
 	return (
 		<header
-			className="bg-primary sm:flex sm:justify-between items-center 
-		sm:px-8 sm:py-4 border-b-2 border-secondary">
+			className="bg-twilightPurple sm:flex sm:justify-between items-center sm:px-8 sm:py-4 border-b-2 border-cyan">
 			<div className="flex items-center justify-between px-4 pt-4 sm:p-0">
 				<div>
 					<NavLink to="/" className="flex flex-nowrap">
-						<CodeBracketIcon className="h-10 w-10 text-secondary bg-primary p-1 rounded-full border-2 border-secondary mr-2" />
-						<span aria-label="Greek Nous" className="text-2xl md:text-3xl font-bold text-secondary font-sigmar">
+						<CodeBracketIcon className="h-10 w-10 text-cyan p-1 rounded-full border-2 border-cyan mr-2" />
+						<span aria-label="Greek Nous" className="text-2xl md:text-3xl text-cyan font-sigmar">
 							Greeknous
 						</span>
 					</NavLink>
@@ -26,8 +23,8 @@ export default function NavBar() {
 				<div className="flex justify-between items-center">
 					<button
 						type="button"
-						className="text-secondary focus:text-secondary/80 hover:text-primary sm:hidden dark:text-white dark:focus:text-primary"
 						onClick={handleClick}
+						className="text-happy focus:text-secondary/80 hover:text-primary sm:hidden dark:text-white dark:focus:text-primary"
 					>
 						<svg
 							className="fill-current h-8 w-8"
@@ -44,44 +41,19 @@ export default function NavBar() {
 					</button>
 				</div>
 			</div>
-			<div className="px-4 pb-2 items-center flex">
-				<div
-					className={`${isOpen ? 'block' : 'hidden'
-						} sm:flex sm:justify-between sm:text-lg sm:p-0 dark:text-white`}
-				>
-					<NavLink to="/writings" className="
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						">
-						Writings
-					</NavLink>
-					<NavLink to="/talks" className="
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						">
-						Talks
-					</NavLink>
-					<NavLink to="/projects" className="
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						">
-						Projects
-					</NavLink>
-					<NavLink to="/about" className="
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						">
-						About
-					</NavLink>
-				</div>
+			<div className={`${isOpen ? 'block' : 'hidden'} sm:flex sm:justify-between sm:text-lg sm:p-0 dark:text-white`}>
+				<NavLink to="/writings" className="block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out">
+					Writings
+				</NavLink>
+				<NavLink to="/talks" className="block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out">
+					Talks
+				</NavLink>
+				<NavLink to="/projects" className="block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out">
+					Projects
+				</NavLink>
+				<NavLink to="/about" className="block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out">
+					About
+				</NavLink>
 			</div>
 		</header>
 	)

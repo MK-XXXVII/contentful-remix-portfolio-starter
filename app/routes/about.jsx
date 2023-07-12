@@ -41,7 +41,7 @@ export default function About() {
     return (
         <div className="px-8 sm:px-0 sm:max-w-2xl mx-auto mb-8">
         <Title title={ seoMetadata.title } />
-      <div className="mt-4 text-lg dark:text-gray-300 mb-28 mt">
+      <div className="mt-4 text-white text-lg dark:text-gray-300">
       {documentToReactComponents(description.json,richTextRenderOptions)}
       </div>
       </div>

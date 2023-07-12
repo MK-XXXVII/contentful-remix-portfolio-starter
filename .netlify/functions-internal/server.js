@@ -60,26 +60,25 @@ var import_react2 = require("@remix-run/react"), import_react3 = require("react"
 function NavBar() {
   let [isOpen, setIsOpen] = (0, import_react3.useState)(!1);
   return /* @__PURE__ */ React.createElement("header", {
-    className: `bg-primary sm:flex sm:justify-between items-center 
-		sm:px-8 sm:py-4 border-b-2 border-secondary`
+    className: "bg-twilightPurple sm:flex sm:justify-between items-center sm:px-8 sm:py-4 border-b-2 border-cyan"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex items-center justify-between px-4 pt-4 sm:p-0"
   }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/",
     className: "flex flex-nowrap"
   }, /* @__PURE__ */ React.createElement(import_solid.CodeBracketIcon, {
-    className: "h-10 w-10 text-secondary bg-primary p-1 rounded-full border-2 border-secondary mr-2"
+    className: "h-10 w-10 text-cyan p-1 rounded-full border-2 border-cyan mr-2"
   }), /* @__PURE__ */ React.createElement("span", {
     "aria-label": "Greek Nous",
-    className: "text-2xl md:text-3xl font-bold text-secondary font-sigmar"
+    className: "text-2xl md:text-3xl text-cyan font-sigmar"
   }, "Greeknous"))), /* @__PURE__ */ React.createElement("div", {
     className: "flex justify-between items-center"
   }, /* @__PURE__ */ React.createElement("button", {
     type: "button",
-    className: "text-secondary focus:text-secondary/80 hover:text-primary sm:hidden dark:text-white dark:focus:text-primary",
     onClick: (e) => {
-      e.preventDefault(), setIsOpen((previous) => !previous);
-    }
+      setIsOpen((prev) => !prev);
+    },
+    className: "text-happy focus:text-secondary/80 hover:text-primary sm:hidden dark:text-white dark:focus:text-primary"
   }, /* @__PURE__ */ React.createElement("svg", {
     className: "fill-current h-8 w-8",
     viewBox: "0 0 20 20",
@@ -89,52 +88,30 @@ function NavBar() {
   }) : /* @__PURE__ */ React.createElement("path", {
     d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
   }), /* @__PURE__ */ React.createElement("title", null, "Menu"))))), /* @__PURE__ */ React.createElement("div", {
-    className: "px-4 pb-2 items-center flex"
-  }, /* @__PURE__ */ React.createElement("div", {
     className: `${isOpen ? "block" : "hidden"} sm:flex sm:justify-between sm:text-lg sm:p-0 dark:text-white`
   }, /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/writings",
-    className: `
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						`
+    className: "block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out"
   }, "Writings"), /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/talks",
-    className: `
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						`
+    className: "block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out"
   }, "Talks"), /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/projects",
-    className: `
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						`
+    className: "block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out"
   }, "Projects"), /* @__PURE__ */ React.createElement(import_react2.NavLink, {
     to: "/about",
-    className: `
-						block sm:mt-0 sm:ml-4 text-secondary py-2 px-4 font-semibold
-						hover:underline hover:bg-secondary hover:text-primary 
-						hover:py-2 hover:px-4 rounded-lg
-						transition duration-300 ease-in-out
-						`
-  }, "About"))));
+    className: "block sm:ml-4 text-happy py-2 px-4 font-semibold hover:underline hover:bg-deepPurple hover:text-cyan hover:py-2 hover:px-4 rounded-lg transition duration-300 ease-in-out"
+  }, "About")));
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-4CP4AAEL.css";
+var tailwind_default = "/build/_assets/tailwind-OJQYLW4K.css";
 
 // route:D:\Remix\contentful-remix-portfolio-starter\app\root.jsx
 var meta = () => ({
   charset: "utf-8",
-  title: "Corgi's Playground",
-  description: "Meet Corgi, the smart cuddly creature that everyone loves!",
+  title: "Greek Nous - Home",
+  description: "Frontend Developer specializing in Headless Ecommerce!",
   viewport: "width=device-width,initial-scale=1"
 }), links = () => [
   { rel: "stylesheet", href: tailwind_default },
@@ -143,23 +120,25 @@ var meta = () => ({
 function App() {
   return /* @__PURE__ */ React.createElement("html", {
     lang: "en"
-  }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement(import_react4.Meta, null), /* @__PURE__ */ React.createElement(import_react4.Links, null)), /* @__PURE__ */ React.createElement("body", null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("main", {
-    className: "container mx-auto pt-8 sm:pt-16"
+  }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement(import_react4.Meta, null), /* @__PURE__ */ React.createElement(import_react4.Links, null)), /* @__PURE__ */ React.createElement("body", {
+    className: "bg-twilightPurple h-screen flex flex-col gap-y-4"
+  }, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("main", {
+    className: "container mx-auto pt-8 pb-32 lg:py-16 flex-grow"
   }, /* @__PURE__ */ React.createElement(import_react4.Outlet, null)), /* @__PURE__ */ React.createElement("footer", {
-    className: "fixed bottom-0 w-screen p-4 bg-primary border-t-4 border-secondary shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-secondary"
+    className: "p-4 bg-twilightPurple border-t-2 border-primary shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-secondary"
   }, /* @__PURE__ */ React.createElement("span", {
-    className: "text-sm text-secondary sm:text-center dark:text-gray-400"
+    className: "text-sm text-happy sm:text-center dark:text-gray-400"
   }, "Created with", /* @__PURE__ */ React.createElement("a", {
     href: "https://remix.run/",
     className: "hover:underline"
-  }, "Remix"), "and", /* @__PURE__ */ React.createElement("a", {
+  }, " Remix"), " and", /* @__PURE__ */ React.createElement("a", {
     href: "https://contentful.com/",
     className: "hover:underline"
-  }, "Contentful")), /* @__PURE__ */ React.createElement("ul", {
-    className: "flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+  }, " Contentful")), /* @__PURE__ */ React.createElement("ul", {
+    className: "flex flex-wrap items-center mt-3 text-sm text-happy dark:text-happy sm:mt-0"
   }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", {
     href: "https://www.contentful.com/remix-tutorial/",
-    className: "mr-4 hover:underline md:mr-6 "
+    className: "mr-4 hover:underline md:mr-6"
   }, "Read More")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", {
     href: "https://github.com/contentful/starter-remix-portfolio",
     className: "mr-4 hover:underline md:mr-6"
@@ -328,9 +307,9 @@ var client = { getProjects, getTalks, getAllBlogs, getSingleBlog, getPage };
 // app/components/Title.jsx
 function Title({ title, emoji }) {
   return /* @__PURE__ */ React.createElement("h1", {
-    className: "text-3xl leading-normal sm:text-5xl font-semibold sm:leading-normal font-body text-secondary dark:text-primary pb-12"
+    className: "text-3xl leading-normal sm:text-5xl font-semibold sm:leading-normal font-body text-happy dark:text-primary pb-12"
   }, /* @__PURE__ */ React.createElement("span", {
-    className: "rounded border-b-4 border-secondary dark:border-primary"
+    className: "rounded border-b-4 border-happy dark:border-primary"
   }, title), "\xA0", /* @__PURE__ */ React.createElement("span", {
     role: "img",
     "aria-label": title
@@ -353,26 +332,26 @@ var import_rich_text_react_renderer = require("@contentful/rich-text-react-rende
     [import_rich_text_types.INLINES.HYPERLINK]: (node, children) => {
       let { data } = node, { uri } = data;
       return /* @__PURE__ */ React.createElement("a", {
-        className: "text-primary underline dark:text-secondary",
+        className: "text-happy underline dark:text-secondary",
         target: "_blank",
         href: uri,
         rel: "noreferrer"
       }, children[0]);
     },
     [import_rich_text_types.BLOCKS.PARAGRAPH]: (_node, children) => /* @__PURE__ */ React.createElement("p", {
-      className: "text-secondary text-base dark:text-gray-400 leading-relaxed mb-4 text-justify"
+      className: "text-white text-lg dark:text-gray-400 leading-relaxed mb-4 text-justify"
     }, children),
     [import_rich_text_types.BLOCKS.HEADING_1]: (_node, children) => /* @__PURE__ */ React.createElement("h2", {
-      className: "text-4xl"
+      className: "text-happy text-4xl"
     }, children),
     [import_rich_text_types.BLOCKS.HEADING_2]: (_node, children) => /* @__PURE__ */ React.createElement("h2", {
-      className: "text-2xl font-semibold text-secondary my-6"
+      className: "text-2xl font-semibold text-happy my-6"
     }, children),
     [import_rich_text_types.BLOCKS.OL_LIST]: (_node, children) => /* @__PURE__ */ React.createElement("ol", {
       className: "list-decimal"
     }, children),
     [import_rich_text_types.BLOCKS.LIST_ITEM]: (_node, children) => /* @__PURE__ */ React.createElement("li", {
-      className: "text-secondary text-lg dark:text-gray-400 mb-4"
+      className: "text-happy text-lg dark:text-gray-400 mb-4"
     }, children)
   }
 };
@@ -387,13 +366,13 @@ function PostSlug() {
     alt: openGraphImage.title,
     className: "w-full h-auto object-cover rounded-lg pb-10"
   }), description && /* @__PURE__ */ React.createElement("p", {
-    className: "text-xl text-secondary dark:text-gray-400 mb-8"
+    className: "text-xl text-cyan dark:text-gray-400 mb-8"
   }, description), tag && /* @__PURE__ */ React.createElement("p", {
-    className: "text-lg font-bold text-secondary dark:text-cyan mx-2 mb-4 my-4"
+    className: "text-lg font-bold text-white dark:text-cyan mx-2 mb-4 my-4"
   }, "Tags:", " ", tag.map((t, index) => /* @__PURE__ */ React.createElement("span", {
     key: index,
-    className: "bg-happy px-2 py-1 mx-2 rounded-full border-2 border-secondary"
-  }, t, index < tag.length - 1 && ", "))), "				", /* @__PURE__ */ React.createElement("article", {
+    className: "bg-deepPurple px-2 py-1 mx-2 rounded-full border border-white"
+  }, t, index < tag.length - 1 && " "))), "				", /* @__PURE__ */ React.createElement("article", {
     className: "mt-4"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "post"
@@ -429,17 +408,17 @@ var meta3 = ({ data }) => {
 function PostList(data) {
   return data.map((post) => /* @__PURE__ */ React.createElement("div", {
     key: post.slug,
-    className: "mt-8 pb-2 border-b-2 border-light last:border-0"
+    className: "mt-8 pb-20 border-b-2 border-light last:border-0"
   }, /* @__PURE__ */ React.createElement(import_react6.Link, {
     to: post.slug
   }, /* @__PURE__ */ React.createElement("h2", {
-    className: "text-xl font-medium sm:text-3xl cursor-pointer hover:text-secondary dark:text-gray-300 dark:hover:text-secondary"
+    className: "text-xl font-medium sm:text-3xl cursor-pointer text-happy hover:text-cyan dark:text-gray-300 dark:hover:text-secondary"
   }, post.title)), /* @__PURE__ */ React.createElement("p", {
-    className: "py-2 sm:py-4 text-sm sm:text-lg font-body dark:text-gray-400"
+    className: "py-2 sm:py-4 text-sm sm:text-lg font-body text-white dark:text-gray-400"
   }, post.description), /* @__PURE__ */ React.createElement("div", {
     className: "flex justify-between mb-1"
   }, /* @__PURE__ */ React.createElement("p", {
-    className: "text-sm sm:text-lg dark:text-gray-300"
+    className: "text-sm text-cyan sm:text-lg dark:text-gray-300"
   }, /* @__PURE__ */ React.createElement("span", {
     role: "img",
     "aria-label": "calendar emoji"
@@ -447,11 +426,11 @@ function PostList(data) {
     className: ""
   }, post.tag.map((item) => /* @__PURE__ */ React.createElement("span", {
     key: item,
-    className: "mr-1 sm:mr-2 text-xs sm:text-sm rounded-full py-1 px-2 sm:px-3 text-primary dark:text-secondary"
+    className: "mr-1 sm:mr-2 text-xs sm:text-sm rounded-full py-1 px-2 sm:px-3 text-happy dark:text-secondary"
   }, "#", item)))), /* @__PURE__ */ React.createElement("a", {
     href: `writings/${post.slug}`
   }, /* @__PURE__ */ React.createElement("p", {
-    className: "pt-1 sm:pt-2 text-xs sm:text-base text-primary cursor-pointer hover:text-hover w-fit dark:text-secondary"
+    className: "pt-1 sm:pt-2 text-xs sm:text-base text-lightTeal cursor-pointer hover:text-happy w-fit dark:text-secondary"
   }, "Read More ", /* @__PURE__ */ React.createElement("span", {
     role: "img",
     "aria-label": "arrow"
@@ -475,77 +454,48 @@ var projects_exports = {};
 __export(projects_exports, {
   default: () => Projects,
   loader: () => loader3,
-  meta: () => meta4,
-  richTextRenderOptions: () => richTextRenderOptions2
+  meta: () => meta4
 });
-var import_node3 = require("@remix-run/node"), import_react7 = require("@remix-run/react");
-var import_react_spring = require("react-spring"), import_rich_text_react_renderer2 = require("@contentful/rich-text-react-renderer"), import_rich_text_types2 = require("@contentful/rich-text-types");
-async function loader3() {
-  let projects = await client.getProjects(), page = await client.getPage("Projects");
-  return (0, import_node3.json)({ projects, page });
-}
-var meta4 = ({ data }) => {
-  let { title, description, ogImage } = data.page.seoMetadata;
-  return {
-    title,
-    description,
-    "og:image": `${ogImage.url}`
-  };
-}, richTextRenderOptions2 = {
+var import_node3 = require("@remix-run/node"), import_react8 = require("@remix-run/react");
+
+// app/components/ProjectCard.jsx
+var import_react_spring = require("react-spring"), import_rich_text_react_renderer2 = require("@contentful/rich-text-react-renderer");
+
+// app/components/richTextRenderOptions.jsx
+var import_react7 = __toESM(require("react")), import_rich_text_types2 = require("@contentful/rich-text-types"), richTextRenderOptions2 = {
   renderNode: {
     [import_rich_text_types2.INLINES.HYPERLINK]: (node, children) => {
       let { data } = node, { uri } = data;
-      return /* @__PURE__ */ React.createElement("a", {
+      return /* @__PURE__ */ import_react7.default.createElement("a", {
         className: "text-primary underline dark:text-secondary",
         target: "_blank",
         href: uri,
         rel: "noreferrer"
       }, children[0]);
     },
-    [import_rich_text_types2.BLOCKS.PARAGRAPH]: (node, children) => /* @__PURE__ */ React.createElement("p", {
+    [import_rich_text_types2.BLOCKS.PARAGRAPH]: (node, children) => /* @__PURE__ */ import_react7.default.createElement("p", {
       className: "text-gray-700 text-base dark:text-gray-400"
     }, children)
   }
 };
-function Projects() {
-  let { projects } = (0, import_react7.useLoaderData)(), popUpAnimation = (0, import_react_spring.useSpring)({
-    to: { transform: "scale(1)" },
-    from: { transform: "scale(0.90)" },
-    config: { tension: 100, friction: 5 }
+
+// app/components/ProjectCard.jsx
+function ProjectCard({ project }) {
+  let fadeIn = (0, import_react_spring.useSpring)({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 500 }
   });
-  return /* @__PURE__ */ React.createElement("div", {
-    className: "px-8 md:px-24 lg:px-32"
-  }, /* @__PURE__ */ React.createElement(Title, {
-    title: "Projects 1",
-    emoji: "\u{1F4BB}"
-  }), /* @__PURE__ */ React.createElement("div", {
-    className: "grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-  }, projects.map((project) => /* @__PURE__ */ React.createElement(import_react_spring.animated.div, {
-    style: popUpAnimation,
+  return /* @__PURE__ */ React.createElement(import_react_spring.animated.li, {
     key: project.title,
-    className: "mt-8 rounded overflow-hidden shadow-lg bg-white cursor-pointer dark:bg-gray-700"
+    style: fadeIn,
+    className: "relative group block w-full overflow-hidden rounded-lg bg-cyan dark:bg-gray-700 shadow-md cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-105 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100"
   }, /* @__PURE__ */ React.createElement("div", {
-    style: {
-      position: "relative",
-      display: "block",
-      overflow: "hidden"
-    }
-  }, /* @__PURE__ */ React.createElement("div", {
-    style: {
-      position: "absolute",
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      transform: "scale(1.5)",
-      filter: "blur(40px)"
-    }
-  }), /* @__PURE__ */ React.createElement("img", __spreadProps(__spreadValues({
+    className: "aspect-w-10 aspect-h-7 overflow-hidden"
+  }, /* @__PURE__ */ React.createElement("img", __spreadProps(__spreadValues({
     alt: ""
   }, project.image), {
-    className: "w-full h-64 object-cover"
+    className: "pointer-events-none object-cover group-hover:opacity-75"
   }))), /* @__PURE__ */ React.createElement("div", {
     className: "px-6 py-4"
   }, /* @__PURE__ */ React.createElement("h2", {
@@ -558,7 +508,44 @@ function Projects() {
     role: "img",
     "aria-label": "internet",
     className: "cursor-pointer"
-  }, "\u{1F517}"))), (0, import_rich_text_react_renderer2.documentToReactComponents)(project.desc.json, richTextRenderOptions2))))));
+  }, "\u{1F517}"))), (0, import_rich_text_react_renderer2.documentToReactComponents)(project.desc.json, richTextRenderOptions2)));
+}
+var ProjectCard_default = ProjectCard;
+
+// app/components/ProjectsGrid.jsx
+function ProjectsGrid({ projects }) {
+  return /* @__PURE__ */ React.createElement("ul", {
+    className: "grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:gap-6 2xl:gap-8 pt-8 xl:py-20 px-4"
+  }, projects.map((project) => /* @__PURE__ */ React.createElement(ProjectCard_default, {
+    key: project.title,
+    project
+  })));
+}
+var ProjectsGrid_default = ProjectsGrid;
+
+// route:D:\Remix\contentful-remix-portfolio-starter\app\routes\projects.jsx
+async function loader3() {
+  let projects = await client.getProjects(), page = await client.getPage("Projects");
+  return (0, import_node3.json)({ projects, page });
+}
+var meta4 = ({ data }) => {
+  let { title, description, ogImage } = data.page.seoMetadata;
+  return {
+    title,
+    description,
+    "og:image": `${ogImage.url}`
+  };
+};
+function Projects() {
+  let { projects } = (0, import_react8.useLoaderData)();
+  return /* @__PURE__ */ React.createElement("div", {
+    className: "px-8 md:px-24 lg:px-32"
+  }, /* @__PURE__ */ React.createElement(Title, {
+    title: "Projects",
+    emoji: "\u{1F4BB}"
+  }), /* @__PURE__ */ React.createElement(ProjectsGrid_default, {
+    projects
+  }));
 }
 
 // route:D:\Remix\contentful-remix-portfolio-starter\app\routes\about.jsx
@@ -569,7 +556,7 @@ __export(about_exports, {
   meta: () => meta5,
   richTextRenderOptions: () => richTextRenderOptions3
 });
-var import_node4 = require("@remix-run/node"), import_react8 = require("@remix-run/react");
+var import_node4 = require("@remix-run/node"), import_react9 = require("@remix-run/react");
 var import_rich_text_react_renderer3 = require("@contentful/rich-text-react-renderer"), import_rich_text_types3 = require("@contentful/rich-text-types");
 async function loader4() {
   return (0, import_node4.json)(await client.getPage("About"));
@@ -595,13 +582,13 @@ var meta5 = ({ data }) => {
   }
 };
 function About() {
-  let { seoMetadata, description } = (0, import_react8.useLoaderData)();
+  let { seoMetadata, description } = (0, import_react9.useLoaderData)();
   return /* @__PURE__ */ React.createElement("div", {
     className: "px-8 sm:px-0 sm:max-w-2xl mx-auto mb-8"
   }, /* @__PURE__ */ React.createElement(Title, {
     title: seoMetadata.title
   }), /* @__PURE__ */ React.createElement("div", {
-    className: "mt-4 text-lg dark:text-gray-300 mb-28 mt"
+    className: "mt-4 text-white text-lg dark:text-gray-300"
   }, (0, import_rich_text_react_renderer3.documentToReactComponents)(description.json, richTextRenderOptions3)));
 }
 
@@ -612,67 +599,68 @@ __export(routes_exports, {
   loader: () => loader5,
   meta: () => meta6
 });
-var import_node7 = require("@remix-run/node");
+var import_node7 = require("@remix-run/node"), import_react12 = require("@remix-run/react");
 
 // app/components/Hero.jsx
-var import_react_text_loop_next = require("react-text-loop-next"), import_node6 = require("@remix-run/node"), import_react10 = require("@remix-run/react"), import_rich_text_types4 = require("@contentful/rich-text-types"), import_rich_text_react_renderer4 = require("@contentful/rich-text-react-renderer"), import_react_spring2 = require("react-spring");
+var import_react_text_loop_next = require("react-text-loop-next"), import_node6 = require("@remix-run/node"), import_react11 = require("@remix-run/react"), import_rich_text_types4 = require("@contentful/rich-text-types"), import_rich_text_react_renderer4 = require("@contentful/rich-text-react-renderer"), import_react_spring2 = require("react-spring");
 
 // app/components/SocialMedia.jsx
-var import_react9 = require("@remix-run/react"), import_fa = require("react-icons/fa"), import_node5 = require("@remix-run/node");
+var import_react10 = require("@remix-run/react"), import_fa = require("react-icons/fa"), import_node5 = require("@remix-run/node");
 function SocialMedia() {
-  let { linksCollection } = (0, import_react9.useLoaderData)(), links2 = {};
-  return linksCollection.items.forEach((link) => {
-    Object.assign(links2, Object.fromEntries([Object.values(link)]));
-  }), /* @__PURE__ */ React.createElement("div", {
-    className: "flex flex-nowrap gap-2 mt-4 sm:mt-16 dark:text-secondary items-start"
-  }, /* @__PURE__ */ React.createElement("a", {
-    href: links2.LinkedIn,
-    target: "_blank",
-    "aria-label": "LinkedIn",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaLinkedin, {
-    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.GitHub,
-    target: "_blank",
-    "aria-label": "GitHub",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaGithub, {
-    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.Facebook,
-    target: "_blank",
-    "aria-label": "Facebook",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaFacebook, {
-    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.Instagram,
-    target: "_blank",
-    "aria-label": "Instagram",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaInstagram, {
-    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.Twitter,
-    target: "_blank",
-    "aria-label": "Twitter",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaTwitter, {
-    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
-  })), /* @__PURE__ */ React.createElement("a", {
-    href: links2.YouTube,
-    target: "_blank",
-    "aria-label": "YouTube",
-    rel: "noreferrer"
-  }, /* @__PURE__ */ React.createElement(import_fa.FaYoutube, {
-    className: "h-10 w-10 sm:h-14 sm:w-14 fill-secondary"
-  })));
+  let { linksCollection } = (0, import_react10.useLoaderData)(), links2 = {};
+  linksCollection.items.forEach((link) => Object.assign(links2, Object.fromEntries([Object.values(link)])));
+  let socialMediaLinks = Object.keys(links2).map((key) => {
+    let Icon;
+    switch (key) {
+      case "LinkedIn":
+        Icon = /* @__PURE__ */ React.createElement(import_fa.FaLinkedin, {
+          className: "h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"
+        });
+        break;
+      case "GitHub":
+        Icon = /* @__PURE__ */ React.createElement(import_fa.FaGithub, {
+          className: "h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"
+        });
+        break;
+      case "Facebook":
+        Icon = /* @__PURE__ */ React.createElement(import_fa.FaFacebook, {
+          className: "h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"
+        });
+        break;
+      case "Instagram":
+        Icon = /* @__PURE__ */ React.createElement(import_fa.FaInstagram, {
+          className: "h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"
+        });
+        break;
+      case "Twitter":
+        Icon = /* @__PURE__ */ React.createElement(import_fa.FaTwitter, {
+          className: "h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"
+        });
+        break;
+      case "YouTube":
+        Icon = /* @__PURE__ */ React.createElement(import_fa.FaYoutube, {
+          className: "h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"
+        });
+        break;
+      default:
+        break;
+    }
+    return /* @__PURE__ */ React.createElement("a", {
+      key,
+      href: links2[key],
+      target: "_blank",
+      "aria-label": key,
+      rel: "noreferrer"
+    }, Icon);
+  });
+  return /* @__PURE__ */ React.createElement("div", {
+    className: "flex flex-nowrap gap-4 mt-4 sm:mt-16 dark:text-happy items-start"
+  }, socialMediaLinks);
 }
 
 // app/components/Hero.jsx
 function Hero() {
-  let { title, rolesCollection, description, imageForPage } = (0, import_react10.useLoaderData)(), options = {
+  let { title, rolesCollection, description, imageForPage } = (0, import_react11.useLoaderData)(), options = {
     renderMark: {
       [import_rich_text_types4.MARKS.BOLD]: (text) => /* @__PURE__ */ React.createElement("b", null, text)
     },
@@ -690,7 +678,7 @@ function Hero() {
     loop: !0
   });
   return /* @__PURE__ */ React.createElement("div", {
-    className: "relative isolate max-h-full overflow-hidden bg-secondary-to-b from-secondary/20"
+    className: "relative isolate max-h-full overflow-hidden"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "mx-auto max-w-full px-4 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-8"
   }, /* @__PURE__ */ React.createElement("div", {
@@ -706,21 +694,21 @@ function Hero() {
   }, /* @__PURE__ */ React.createElement("div", {
     className: "items-center justify-center pt-8 lg:pt-0"
   }, /* @__PURE__ */ React.createElement("h1", {
-    className: "text-3xl text-center md:text-start sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter"
+    className: "text-3xl text-start text-happy md:text-start sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter"
   }, "Hello, I'm", " ", /* @__PURE__ */ React.createElement(import_react_spring2.animated.div, {
     style: shakeAnimation,
-    className: "inline-block text-center bg-primary text-secondary px-2 py-4 dark:bg-secondary dark:text-primary"
+    className: "inline-block text-center bg-happy text-black px-2 py-4 dark:bg-secondary dark:text-primary"
   }, title))), /* @__PURE__ */ React.createElement("div", {
-    className: `flex flex-wrap items-center justify-left text-center sm:justify-center md:justify-start lg:justify-start xl:justify-start 
-                                            text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl 
+    className: `flex flex-wrap text-white items-center justify-left text-center sm:justify-left md:justify-start lg:justify-start xl:justify-start \r
+                                            text-2xl md:text-2xl lg:text-3xl xl:text-4xl \r
                                             pt-6 font-bold tracking-tighter`
   }, /* @__PURE__ */ React.createElement("h1", null, "and I'm", "  "), /* @__PURE__ */ React.createElement(import_react_text_loop_next.TextLoop, {
     mask: !0
   }, rolesCollection.items.map((role) => /* @__PURE__ */ React.createElement("h1", {
-    className: "bg-happy px-2 py-4 mx-2",
+    className: "bg-deepPurple px-2 py-4 mx-2",
     key: role.roleTitle
   }, role.roleTitle))), /* @__PURE__ */ React.createElement("span", null, " Developer")), /* @__PURE__ */ React.createElement("p", {
-    className: "my-6 text-base leading-8 text-secondary"
+    className: "my-6 text-lg leading-8 text-cyan"
   }, (0, import_rich_text_react_renderer4.documentToReactComponents)(description.json, options)), /* @__PURE__ */ React.createElement(SocialMedia, null)))), /* @__PURE__ */ React.createElement("div", {
     className: "px-4 py-2 text-center lg:flex items-center justify-center hidden"
   }, imageForPage && /* @__PURE__ */ React.createElement("img", {
@@ -732,7 +720,8 @@ function Hero() {
 
 // route:D:\Remix\contentful-remix-portfolio-starter\app\routes\index.jsx
 async function loader5() {
-  return (0, import_node7.json)(await client.getPage("Michail"));
+  let page = await client.getPage("Michail"), projects = await client.getProjects();
+  return (0, import_node7.json)(__spreadProps(__spreadValues({}, page), { projects }));
 }
 var meta6 = ({ data }) => {
   let { seoMetadata } = data;
@@ -743,7 +732,10 @@ var meta6 = ({ data }) => {
   };
 };
 function Index() {
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Hero, null));
+  let { projects } = (0, import_react12.useLoaderData)();
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Hero, null), /* @__PURE__ */ React.createElement(ProjectsGrid_default, {
+    projects
+  }));
 }
 
 // route:D:\Remix\contentful-remix-portfolio-starter\app\routes\talks.jsx
@@ -753,7 +745,7 @@ __export(talks_exports, {
   loader: () => loader6,
   meta: () => meta7
 });
-var import_node8 = require("@remix-run/node"), import_react11 = require("@remix-run/react");
+var import_node8 = require("@remix-run/node"), import_react13 = require("@remix-run/react");
 var import_rich_text_react_renderer5 = require("@contentful/rich-text-react-renderer"), import_react_spring3 = require("react-spring");
 async function loader6() {
   let talks = await client.getTalks(), page = await client.getPage("Talks");
@@ -768,7 +760,7 @@ var meta7 = ({ data }) => {
   };
 };
 function Talks() {
-  let { talks } = (0, import_react11.useLoaderData)(), popUpAnimation = (0, import_react_spring3.useSpring)({
+  let { talks } = (0, import_react13.useLoaderData)(), popUpAnimation = (0, import_react_spring3.useSpring)({
     to: { transform: "scale(1)" },
     from: { transform: "scale(0.90)" },
     config: { tension: 100, friction: 5 }
@@ -819,7 +811,7 @@ function Talks() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "fd5c278b", entry: { module: "/build/entry.client-OPOE64L5.js", imports: ["/build/_shared/chunk-RXBXOOMD.js", "/build/_shared/chunk-PJTDBEHK.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-7O5QIWA5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-6ETQ3FL3.js", imports: ["/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-D7Y6OSO6.js", imports: ["/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-SIRDQVIK.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/projects": { id: "routes/projects", parentId: "root", path: "projects", index: void 0, caseSensitive: void 0, module: "/build/routes/projects-M7IBBA3J.js", imports: ["/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-SIRDQVIK.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/talks": { id: "routes/talks", parentId: "root", path: "talks", index: void 0, caseSensitive: void 0, module: "/build/routes/talks-PD67A3VB.js", imports: ["/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-SIRDQVIK.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/$slug": { id: "routes/writings/$slug", parentId: "root", path: "writings/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/writings/$slug-QRR5LOM4.js", imports: ["/build/_shared/chunk-NRAIPCGV.js", "/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-HN4TSISW.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/index": { id: "routes/writings/index", parentId: "root", path: "writings", index: !0, caseSensitive: void 0, module: "/build/routes/writings/index-6ZZ6BUCQ.js", imports: ["/build/_shared/chunk-NRAIPCGV.js", "/build/_shared/chunk-HN4TSISW.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-FD5C278B.js" };
+var assets_manifest_default = { version: "8684e764", entry: { module: "/build/entry.client-VJSZ67P2.js", imports: ["/build/_shared/chunk-EPMHMQD6.js", "/build/_shared/chunk-PJTDBEHK.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-NV7HDFQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-GXAX75GK.js", imports: ["/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-LYS7ZZGQ.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-GWWCDIQM.js", imports: ["/build/_shared/chunk-H5MKE3E5.js", "/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-SFPW3557.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/projects": { id: "routes/projects", parentId: "root", path: "projects", index: void 0, caseSensitive: void 0, module: "/build/routes/projects-CBYHF4WG.js", imports: ["/build/_shared/chunk-H5MKE3E5.js", "/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-LYS7ZZGQ.js", "/build/_shared/chunk-SFPW3557.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/talks": { id: "routes/talks", parentId: "root", path: "talks", index: void 0, caseSensitive: void 0, module: "/build/routes/talks-YTV5GK3V.js", imports: ["/build/_shared/chunk-LYS7ZZGQ.js", "/build/_shared/chunk-SFPW3557.js", "/build/_shared/chunk-VH4EL4GG.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/$slug": { id: "routes/writings/$slug", parentId: "root", path: "writings/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/writings/$slug-YFXJGLRD.js", imports: ["/build/_shared/chunk-NRAIPCGV.js", "/build/_shared/chunk-HPFIFNP4.js", "/build/_shared/chunk-LYS7ZZGQ.js", "/build/_shared/chunk-NLG2DQ56.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/writings/index": { id: "routes/writings/index", parentId: "root", path: "writings", index: !0, caseSensitive: void 0, module: "/build/routes/writings/index-I3H5FAFJ.js", imports: ["/build/_shared/chunk-NRAIPCGV.js", "/build/_shared/chunk-LYS7ZZGQ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-8684E764.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports }, routes = {

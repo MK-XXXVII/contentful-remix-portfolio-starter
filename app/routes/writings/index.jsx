@@ -21,13 +21,13 @@ export const meta = ({ data }) => {
 function PostList(data) {
 	return (
 		data.map(post => (
-			<div key={post.slug} className="mt-8 pb-2 border-b-2 border-light last:border-0">
+			<div key={post.slug} className="mt-8 pb-20 border-b-2 border-light last:border-0">
 				<Link to={post.slug}>
-					<h2 className="text-xl font-medium sm:text-3xl cursor-pointer hover:text-secondary dark:text-gray-300 dark:hover:text-secondary">{post.title}</h2>
+					<h2 className="text-xl font-medium sm:text-3xl cursor-pointer text-happy hover:text-cyan dark:text-gray-300 dark:hover:text-secondary">{post.title}</h2>
 				</Link>
-				<p className="py-2 sm:py-4 text-sm sm:text-lg font-body dark:text-gray-400">{post.description}</p>
+				<p className="py-2 sm:py-4 text-sm sm:text-lg font-body text-white dark:text-gray-400">{post.description}</p>
 				<div className="flex justify-between mb-1">
-					<p className="text-sm sm:text-lg dark:text-gray-300">
+					<p className="text-sm text-cyan sm:text-lg dark:text-gray-300">
 						<span role="img" aria-label="calendar emoji">
 							🗓 {' '}
 						</span>
@@ -37,7 +37,7 @@ function PostList(data) {
 						{
 							post.tag.map(item =>
 							(
-								<span key={item} className="mr-1 sm:mr-2 text-xs sm:text-sm rounded-full py-1 px-2 sm:px-3 text-primary dark:text-secondary">
+								<span key={item} className="mr-1 sm:mr-2 text-xs sm:text-sm rounded-full py-1 px-2 sm:px-3 text-happy dark:text-secondary">
 									#{item}
 								</span>
 							)
@@ -46,7 +46,7 @@ function PostList(data) {
 					</p>
 				</div>
 				<a href={`writings/${post.slug}`}>
-					<p className="pt-1 sm:pt-2 text-xs sm:text-base text-primary cursor-pointer hover:text-hover w-fit dark:text-secondary">Read More <span role="img" aria-label="arrow">→</span>
+					<p className="pt-1 sm:pt-2 text-xs sm:text-base text-lightTeal cursor-pointer hover:text-happy w-fit dark:text-secondary">Read More <span role="img" aria-label="arrow">→</span>
 					</p>
 				</a>
 			</div>

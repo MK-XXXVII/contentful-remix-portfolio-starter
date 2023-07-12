@@ -8,20 +8,49 @@ export async function loader() {
 }
 export default function SocialMedia() {
     const { linksCollection } = useLoaderData();
-
     const links = {}
-	linksCollection.items.forEach(link => {
-		Object.assign(links, Object.fromEntries([Object.values(link)]))
-	});
+    linksCollection.items.forEach(link => Object.assign(links, Object.fromEntries([Object.values(link)])));
+    
+    const socialMediaLinks = Object.keys(links).map((key) => {
+      let Icon;
+      switch (key) {
+        case "LinkedIn":
+            Icon = <FaLinkedin className="h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy" />;
+            break;
+        case "GitHub":
+            Icon = <FaGithub className="h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"  />;
+           break;
+        case "Facebook":
+            Icon = <FaFacebook className="h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"  />;
+            break;
+        case "Instagram":
+            Icon = <FaInstagram className="h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"  />;
+            break;
+        case "Twitter":
+            Icon = <FaTwitter className="h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"  />;
+            break;
+        case "YouTube":
+            Icon = <FaYoutube className="h-8 w-8 sm:h-12 sm:w-12 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-125 fill-happy"  />;
+            break;
+        default:
+          break;
+      }
+      return (
+        <a 
+            key={key} 
+            href={links[key]} 
+            target="_blank" 
+            aria-label={key} 
+            rel="noreferrer"
+        >
+            {Icon}
+        </a>
+      );
+    })
 
     return (
-        <div className="flex flex-nowrap gap-2 mt-4 sm:mt-16 dark:text-secondary items-start">
-            <a href={links.LinkedIn} target="_blank" aria-label="LinkedIn" rel="noreferrer"><FaLinkedin className="h-10 w-10 sm:h-14 sm:w-14 fill-secondary" /></a>
-            <a href={links.GitHub} target="_blank" aria-label="GitHub" rel="noreferrer"><FaGithub className="h-10 w-10 sm:h-14 sm:w-14 fill-secondary" /></a>
-            <a href={links.Facebook} target="_blank" aria-label="Facebook" rel="noreferrer"><FaFacebook className="h-10 w-10 sm:h-14 sm:w-14 fill-secondary" /></a>
-            <a href={links.Instagram} target="_blank" aria-label="Instagram" rel="noreferrer"><FaInstagram className="h-10 w-10 sm:h-14 sm:w-14 fill-secondary" /></a>
-            <a href={links.Twitter} target="_blank" aria-label="Twitter" rel="noreferrer"><FaTwitter className="h-10 w-10 sm:h-14 sm:w-14 fill-secondary" /></a>
-            <a href={links.YouTube} target="_blank" aria-label="YouTube" rel="noreferrer"><FaYoutube className="h-10 w-10 sm:h-14 sm:w-14 fill-secondary" /></a>
+        <div className="flex flex-nowrap gap-4 mt-4 sm:mt-16 dark:text-happy items-start">
+            {socialMediaLinks}
         </div>
     )
 }

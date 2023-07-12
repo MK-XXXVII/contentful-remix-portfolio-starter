@@ -14,7 +14,7 @@ module.exports = {
         deepPurple: 'rgb(128, 0, 128);',
         serenity: 'rgb(146, 168, 209);',
         earthyBrown: 'rgb(160, 82, 45);',
-        twilightPurple: 'rgb(75, 0, 130);',
+        twilightPurple: 'rgb(34, 14, 59);',
         skyBlue: 'rgb(135, 206, 235);',
         sunsetOrange: 'rgb(255, 111, 97);',
         lighhtLime: 'rgb(236 252 203);',
@@ -26,6 +26,15 @@ module.exports = {
         'sigmar': ['Sigmar One', 'cursive'],
       }
     },
-    plugins: [],
-  }
+  },
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
+  variants: {
+    extend: {
+      transform: ['hover', 'focus'],  // Add hover and focus variants for transform
+      ringWidth: ['hover', 'active'], // Add hover and active variants for ringWidth (for focus:ring)
+      opacity: ['group-hover'], // Add group-hover variant for opacity
+    },
+  },
 }
